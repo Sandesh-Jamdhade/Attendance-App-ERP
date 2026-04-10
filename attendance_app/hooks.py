@@ -9,14 +9,13 @@ doctype_js = {
     "Employee": "public/js/employee.js"
 }
 
-doc_events = {
-    "Attendance": {
-        "validate": "attendance_app.api.disable_attendance_validation"
-    }
-}
-
 override_doctype_class = {
     "Attendance": "attendance_app.overrides.custom_attendance.CustomAttendance"
+}
+
+override_whitelisted_methods = {
+    "hrms.hr.doctype.attendance.attendance.mark_bulk_attendance": 
+    "attendance_app.api.mark_bulk_attendance"
 }
 # Apps
 # ------------------
