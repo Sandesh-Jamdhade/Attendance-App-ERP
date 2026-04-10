@@ -1,6 +1,8 @@
 frappe.ui.form.on('Employee', {
     refresh: function(frm) {
+
         frm.add_custom_button('Mark Attendance', function() {
+
             frappe.call({
                 method: 'attendance_app.api.mark_attendance',
                 args: {
@@ -8,9 +10,17 @@ frappe.ui.form.on('Employee', {
                     status: 'Present'
                 },
                 callback: function(r) {
-                    frappe.msgprint(r.message);
+
+                    // Silent success
+                    frappe.show_alert({
+                        message: "Attendance Updated",
+                        indicator: 'green'
+                    });
+
                 }
             });
+
         });
+
     }
 });

@@ -8,6 +8,16 @@ app_license = "mit"
 doctype_js = {
     "Employee": "public/js/employee.js"
 }
+
+doc_events = {
+    "Attendance": {
+        "validate": "attendance_app.api.disable_attendance_validation"
+    }
+}
+
+override_doctype_class = {
+    "Attendance": "attendance_app.overrides.custom_attendance.CustomAttendance"
+}
 # Apps
 # ------------------
 
