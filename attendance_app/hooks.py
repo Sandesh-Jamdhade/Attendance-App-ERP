@@ -5,6 +5,9 @@ app_description = "Attendance application"
 app_email = "sandeshjamdhade26@gmail.com"
 app_license = "mit"
 
+doctype_js = {
+    "Employee": "public/js/employee.js"
+}
 # Apps
 # ------------------
 
