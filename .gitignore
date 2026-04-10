@@ -5,3 +5,10 @@
 tags
 node_modules
 __pycache__
+__pycache__/
+*.pyc
+*.log
+node_modules/
+.env
+*.sqlite3
+.DS_Store
